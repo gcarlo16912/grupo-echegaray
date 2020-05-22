@@ -1,0 +1,223 @@
+extends template/_head.pug
+block content
+    - 
+        var proyectos = [
+            {
+                imgs: 'proyecto_01.jpg',
+                text: 'Ampliación de la SET Ayaviri - Puno'
+            },
+            {
+                imgs: 'proyecto_02.jpg',
+                text: 'Ampliación de la SET Bellavista - Puno'
+            },
+            {
+                imgs: 'proyecto_03.jpg',
+                text: 'Implementación de Fibra Óptica LT Mollepata - San Francisco - Ayacucho'
+            },
+            {
+                imgs: 'proyecto_04.jpg',
+                text: 'Ampliación de Redes Eléctricas Trujillo - La Libertad'
+            },
+            {
+                imgs: 'proyecto_05.jpg',
+                text: 'Ampliación de la SET Azángaro - Puno'
+            },
+            {
+                imgs: 'proyecto_06.jpg',
+                text: 'Mejoramiento de Vías de Acceso Peatonal en Villa María del Triunfo - Lima'
+            },
+            {
+                imgs: 'proyecto_07.jpg',
+                text: 'Mejoramiento del Alimentador HRZ282 Huaraz Centro - Ancash'
+            },
+            {
+                imgs: 'proyecto_08.jpg',
+                text: 'Ampliación y Mejoramiento del servicio de Agua Potable y UBS en la Isla Taquile - Puno'
+            },
+            {
+                imgs: 'proyecto_09.jpg',
+                text: 'Mejoramiento de Vías de Acceso Peatonal en Villa María del Triunfo - Lima'
+            },
+            {
+                imgs: 'proyecto_10.jpg',
+                text: 'Mejoramiento de Vías de Acceso Peatonal en Ate - Lima'
+            },
+            {
+                imgs: 'proyecto_11.jpg',
+                text: 'Mejoramiento de Taludes en Zonas de Riesgo por Deslizamiento en San Juan de Lurigancho - Lima'
+            },
+            {
+                imgs: 'proyecto_12.jpg',
+                text: 'Mejoramiento de Taludes y Vías de Acceso Peatonal en Zonas de Riesgo por Deslizamiento en San Juan de Lurigancho - Lima'
+            },
+            {
+                imgs: 'proyecto_13.jpg',
+                text: ''
+            },
+            {
+                imgs: 'proyecto_14.jpg',
+                text: ''
+            },
+            {
+                imgs: 'proyecto_15.jpg',
+                text: 'Pista'
+            },
+        ]
+    -
+        var clientes = [
+            {
+                img: 'cliente_01.jpeg',
+                text: 'Electro Puno S.A.A.'
+            },
+            {
+                img: 'cliente_02.jpeg',
+                text: 'Hindrandina'
+            },
+            {
+                img: 'cliente_03.jpeg',
+                text: 'Municipalidad de Lima'
+            },
+            {
+                img: 'cliente_04.jpeg',
+                text: 'Electro Centro'
+            },
+            {
+                img: 'cliente_05.jpeg',
+                text: 'Enmodel'
+            },
+            {
+                img: 'cliente_06.jpeg',
+                text: 'Ministerio de Vivienda'
+            },
+            {
+                img: 'cliente_07.jpeg',
+                text: 'Pnsr'
+            },
+            {
+                img: 'cliente_08.jpeg',
+                text: 'Emape S.A.'
+            },
+        ]
+    // Seccion Nosotros
+    section.section-main
+        .container
+            .row
+                .col.col-lg-6
+                    .container-heading-title
+                        h2.section-title Nosotros
+                    .container-content
+                        p.content-text.text-justify Somos una empresa conformada por un equipo multidisciplinario de profesionales altamente calificados; con amplia experiencia en proyectos y estudios de infraestructura en diferentes ramas de ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar integro y transparente, que impulsen el desarrollo, aporten al conocimiento técnico, agreguen valor valor, bienestar y aporten al mejoramiento de a calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
+                .col.col-lg-6
+                    .container-image
+                        .section-image
+                            img(src="/src/img/lineas-de-transmision-electrica.jpg", alt="lineas de transmision electrica")
+
+    // Seccion Misión Visión Valores
+    section.section-main.bg-section-green
+        .container
+            .row
+                .col.col-lg-4
+                    .container-heading-title
+                        h2.section-title.text-white Misión
+                    .container-content
+                        p.content-text.text-white Ejecutar proyectos y estudios de infraestructura en diferentes ramas de la ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar íntegro y transparente, que impulsen el desarrollo, contribuyan al conocimiento técnico, agreguen valor, bienestar y aporten al mejoramiento de la calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
+                .col.col-lg-4
+                    .container-heading-title
+                        h2.section-title.text-white Visión
+                    .container-content
+                        p.content-text.text-white Ser reconocidos como Empresa Líder a nivel nacional con proyección internacional, en la prestación de soluciones integrales de ingeniería y construcción aplicando el conocimiento y tecnología para contribuir al desarrollo sostenible, entregando proyectos a satisfacción de nuestros clientes y generando bienestar en sus colaboradores.
+                .col.col-lg-4
+                    .container-heading-title
+                        h2.section-title.text-white Valores
+                    .container-content.d-flex.justify-content-around
+                        ul
+                            li Ética
+                            li Respeto
+                            li Honestidad
+                            li Puntualidad
+                        ul
+                            li Lealtad
+                            li Calidad
+                            li Solidaridad
+                            li Responsabilidad
+
+    // Seccion Consultoría
+    section.section-main
+        .container
+            .row
+                .col.col-lg-12
+                    h2.text-center.mb-5.section-title Consultoría
+                .col.col-lg-4.mb-0.mb-lg-4
+                    .container-title-image
+                        a(href="/energia")
+                            .container-image
+                                img(src="/src/img/energia_electrica.jpeg", alt="energia electrica")
+                            .container-text
+                                p Energía
+                .col.col-lg-4.mb-0.mb-lg-4
+                    .container-title-image
+                        a(href="/edificaciones")
+                            .container-image
+                                img(src="/src/img/edificacion.jpeg", alt="edificacion")
+                            .container-text
+                                p Edificaciones
+                .col.col-lg-4.mb-0.mb-lg-4
+                    .container-title-image
+                        a(href="/senamiento")
+                            .container-image
+                                img(src="/src/img/agua_senamiento.jpeg", alt="agua de senamiento")
+                            .container-text
+                                p Senamiento
+                .col.col-lg-4.mb-0.mb-lg-4
+                    .container-title-image
+                        a(href="/medio_ambiente")
+                            .container-image
+                                img(src="/src/img/medio_ambiente.jpeg", alt="medio ambiente")
+                            .container-text
+                                p Medio Ambiente
+                .col.col-lg-4.mb-0.mb-lg-4
+                    .container-title-image
+                        a(href="/medio_ambiente")
+                            .container-image
+                                img(src="/src/img/medio_ambiente.jpeg", alt="medio ambiente")
+                            .container-text
+                                p Medio Ambiente
+
+    // Seccion Proyecto
+    section.section-main.bg-section-green
+        .container
+            .row
+                .col.col-lg-12
+                    h2.text-center.mb-5.section-title.text-white  Proyecto
+                each proyecto in proyectos
+                    .col.col-lg-4.mb-0.mb-lg-4
+                        .container-proyecto
+                            .img-proyecto
+                                img(src= `/src/img/${proyecto.imgs}`, alt= proyecto.text)
+                            .text-proyecto
+                                p= proyecto.text
+
+    // Seccion Cliente
+    section.section-main
+        .container
+            .row
+                .col.col-lg-12
+                    h2.text-center.mb-5.section-title Cliente
+                each cliente in clientes
+                    .col.col-lg-3.mb-0.mb-lg-4
+                        .container-cliente
+                            .img-cliente
+                                img(src= `/src/img/${cliente.img}`, alt= cliente.text, title= cliente.text)
+
+    // Seccion Desco
+    section.section-main.bg-section-green
+        .container
+            .row
+                .col.col-lg-6
+                    .container-image
+                        .section-image
+                            img(src="/src/img/reunion.jpg", alt="reunion")
+                .col.col-lg-6
+                    .container-content
+                        p.content-text.text-white.text-justify Somos una empresa conformada por un equipo multidisciplinario de profesionales altamente calificados; con amplia experiencia en proyectos y estudios de infraestructura en diferentes ramas de ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar integro y transparente, que impulsen el desarrollo, aporten al conocimiento técnico, agreguen valor valor, bienestar y aporten al mejoramiento de a calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
+                

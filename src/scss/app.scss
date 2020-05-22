@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+
+// Style Footer
+
+.bg-footer-contact {
+  background-image: url("/src/img/contacto.jpg");
+  background-repeat: no-repeat;
+  .capa-contact {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #ffffff 0%, #23a455 100%);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.title-footer{
+    h2.title{
+        color: #fff;
+    }
+}
+
+.content-list-contact{
+    ul.list-contact{
+        li.contac{
+            display: flex;
+            color: #fff;
+            margin-bottom: 1rem;
+            span.icon{
+                padding-right: .5rem;
+                i{
+                }
+            }
+        }
+    }
+}
+
+.content-list-links{
+    ul.list-links{
+        li.link{
+            margin-bottom: 1rem;
+            a{
+                text-decoration: none;
+                color: #fff;
+                margin-left: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+        li.link:hover{
+            a{
+                color: #13aff0;
+                margin-left: 10px;
+            }
+        }
+    }
+}

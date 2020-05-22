@@ -1,0 +1,84 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='/').link-navbar-menu
+        img(src="/src/img/logo_grupo_echegaray.png", alt="alt").logo-nav-bar
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+        ul.navbar-nav
+            li.nav-item.dropdown
+                a#menu-inicio.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Inicio
+                ul.dropdown-menu(aria-labelledby='menu-inicio')
+                    li
+                        a.dropdown-item(href='#nosotros') Nosotros
+                    li
+                        a.dropdown-item(href='#mision_vision_valores') Misión, Visión y Valores
+            li.nav-item.dropdown
+                a#menu-consultoria.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Consultoría
+                ul.dropdown-menu(aria-labelledby='menu-consultoria')
+                    //- li
+                    //-     a.dropdown-item(href='#') Proyecto
+                    li.dropdown-submenu
+                        a.dropdown-item.dropdown-toggle(href='#') Energía
+                        ul.dropdown-menu
+                            li
+                                a.dropdown-item(href='/generacion') Generación
+                            li
+                                a.dropdown-item(href='/transmision') Transmisión
+                            li
+                                a.dropdown-item(href='/distribucion') Distribución
+                            li
+                                a.dropdown-item(href='/instalaciones_electricas') Instalaciones Eléctricas
+                    li.dropdown-submenu
+                        a.dropdown-item.dropdown-toggle(href='#') Saneamiento
+                        ul.dropdown-menu
+                            li
+                                a.dropdown-item(href='/agua_potable') Agua Potable
+                            li
+                                a.dropdown-item(href='/alcantarillado') Alcantarillado
+                            li
+                                a.dropdown-item(href='/drenaje_pluviar') Drenaje Pluviar
+                            li
+                                a.dropdown-item(href='/planta_tratamiento') Planta de Tratamiento
+                            li
+                                a.dropdown-item(href='/instalaciones_sanitarias') Instalaciones Sanitarias
+                    li.dropdown-submenu
+                        a.dropdown-item.dropdown-toggle(href='#') Transporte
+                        ul.dropdown-menu
+                            li
+                                a.dropdown-item(href='/carreteras') Carreteras
+                            li
+                                a.dropdown-item(href='/pistas_vederas') Pistas y Vederas
+                            li
+                                a.dropdown-item(href='/puentes_tuneles') Puentes y Tuneles
+                            li
+                                a.dropdown-item(href='/escaleras_taludes') Escaleras y Taludes
+                    li.dropdown-submenu
+                        a.dropdown-item.dropdown-toggle(href='#') Edificaciones
+                        ul.dropdown-menu
+                            li
+                                a.dropdown-item(href='/edificios') Edificios
+                            li
+                                a.dropdown-item(href='/colegios') Colegios
+                            li
+                                a.dropdown-item(href='/hospitales') Hospitales
+                            li
+                                a.dropdown-item(href='/universidades') Universidades
+                    li.dropdown-submenu
+                        a.dropdown-item.dropdown-toggle(href='#') Medio Ambiente
+                        ul.dropdown-menu
+                            li
+                                a.dropdown-item(href='/manejo_ambiental') Manejo Ambiental
+                            li
+                                a.dropdown-item(href='/planta_residuos') Planta de Residuos
+                            li
+                                a.dropdown-item(href='/estudios_ambientales') Estudios Ambientales
+            li.nav-item
+                a.nav-link(href='#proyecto') Proyecto
+            li.nav-item
+                a.nav-link(href='#servicio') Servicio
+            li.nav-item
+                a.nav-link(href='#cliente') Cliente
+            li.nav-item
+                a.nav-link(href='#contacto') Contacto

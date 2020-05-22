@@ -1,0 +1,23 @@
+.link-navbar-menu {
+  width: 13.17%;
+  .logo-nav-bar {
+    width: 100%;
+  }
+}
+
+.dropdown-submenu {
+  position: relative;
+  a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: 0.8em;
+  }
+  .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Grupo Echegaray
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+    body
+        // insertando la barra de navegación
+        include _nav-menu.pug
+        block content
+        footer
+            .p-0.p-lg-5.bg-footer-contact.position-relative
+                .capa-contact
+                .container
+                    .row
+                        .col.col-lg-4
+                            .title-footer
+                                h2.title Contactos
+                            .content-list-contact
+                                ul.list-contact
+                                    li.contac
+                                        span.icon
+                                            i.fas.fa-search
+                                        p.text Jr. Teniente Diego Ferré Nº 220 Urb. Cooviecma G-3, Santiago de Surco, Lima - Perú
+                                    li.contac
+                                        span.icon
+                                            i.fas.fa-envelope
+                                        p.text gerencia@grupoechegaray.com
+                                    li.contac
+                                        span.icon
+                                            i.fas.fa-server
+                                        p.text grupoechegaray@gmail.com
+                                    li.contac
+                                        span.icon
+                                            i.fas.fa-phone-alt
+                                        p.text 931 071558 / 958 978669
+                        .col.col-lg-4
+                            .title-footer
+                                h2.title Contactos
+                            .content-list-links
+                                ul.list-links
+                                    li.link
+                                        a(href="#")
+                                            i.fas.fa-link.pr-2
+                                            | Energía
+                                        
+                                    li.link
+                                        a(href="#")
+                                            i.fas.fa-link.pr-2
+                                            | Saneamiento
+                                    li.link
+                                        a(href="#")
+                                            i.fas.fa-link.pr-2
+                                            | Edificaciones
+                                    li.link
+                                        a(href="#")
+                                            i.fas.fa-link.pr-2
+                                            | Medio Ambiente
+                        .col.col-lg-4
+                            .content-formulario
+                                form(action="/" method="method")
+                                    .container
+                                        .row
+                                            .col-12.mb-0.mb-lg-2
+                                                input(type="text", name="nombre", placeholder="Nombre", required).form-control
+                                            .col-12.mb-0.mb-lg-2
+                                                input(type="email", name="email", placeholder="Email", required).form-control
+                                            .col-12.mb-0.mb-lg-2
+                                                input(type="telf", name="telefono", placeholder="Telefono", required).form-control
+                                            .col-12.mb-0.mb-lg-2
+                                                textarea(name="mensaje", cols="30", rows="10", required).form-control
+                                            .col-12
+                                                button.btn.btn-primary(type='submit') Contactar
+            .container
+                p
+                    | Derechos Reservados &copy; 2016 
+                    i.fa.fa-value(aria-hidden='true') &nbsp;
+                    a(href='#') gcarloweb.com
