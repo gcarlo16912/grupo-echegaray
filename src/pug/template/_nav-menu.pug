@@ -3,7 +3,18 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         img(src="/src/img/logo_grupo_echegaray.png", alt="alt").logo-nav-bar
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
-    #navbarNavDropdown.collapse.navbar-collapse
+    #navbarNavDropdown.collapse.navbar-collapse.flex-column
+        .content-social-networks
+            ul.list
+                li.item
+                    a.link.color-fb
+                        i.fab.fa-facebook-square
+                li.item
+                    a.link.color-in
+                        i.fab.fa-linkedin
+                li.item
+                    a.link.color-yt
+                        i.fab.fa-youtube-square
         ul.navbar-nav
             li.nav-item.dropdown
                 a#menu-inicio.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')

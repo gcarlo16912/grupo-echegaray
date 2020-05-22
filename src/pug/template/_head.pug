@@ -35,6 +35,17 @@ html(lang="en")
                                         span.icon
                                             i.fas.fa-phone-alt
                                         p.text 931 071558 / 958 978669
+                                .content-social-networks
+                                    ul.list
+                                        li.item
+                                            a.link.color-fb
+                                                i.fab.fa-facebook-square
+                                        li.item
+                                            a.link.color-in
+                                                i.fab.fa-linkedin
+                                        li.item
+                                            a.link.color-yt
+                                                i.fab.fa-youtube-square
                         .col.col-lg-4
                             .title-footer
                                 h2.title Contactos
@@ -59,7 +70,7 @@ html(lang="en")
                                             | Medio Ambiente
                         .col.col-lg-4
                             .content-formulario
-                                form(action="/" method="method")
+                                form#form_contact
                                     .container
                                         .row
                                             .col-12.mb-0.mb-lg-2
@@ -71,9 +82,11 @@ html(lang="en")
                                             .col-12.mb-0.mb-lg-2
                                                 textarea(name="mensaje", cols="30", rows="10", required).form-control
                                             .col-12
-                                                button.btn.btn-primary(type='submit') Contactar
+                                                button#send-contact.btn.btn-primary(type='button') Contactar
             .container
                 p
                     | Derechos Reservados &copy; 2016 
                     i.fa.fa-value(aria-hidden='true') &nbsp;
                     a(href='#') gcarloweb.com
+
+

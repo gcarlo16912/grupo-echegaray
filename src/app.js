@@ -19,3 +19,6 @@ $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
 
   return false;
 });
+
+// let sendContact = document.getElementById('send-contact');
+// sendContact.addEventListener('click',)
