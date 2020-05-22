@@ -1,8 +1,6 @@
 import $ from "jquery";
 import "bootstrap";
-import "./scss/app.scss";
-import "./scss/main.scss";
-
+import {formContact} from './main';
 // Script navbar menu
 $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
   if (!$(this).next().hasClass("show")) {
@@ -20,5 +18,6 @@ $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
   return false;
 });
 
-// let sendContact = document.getElementById('send-contact');
-// sendContact.addEventListener('click',)
+$("#send-contact").click(()=>{
+    formContact('giancarlo', 'gcarlo.com', '986432497');
+})
