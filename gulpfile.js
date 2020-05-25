@@ -1,9 +1,6 @@
 const { src, series, parallel, dest, watch } = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
-const changed = require("gulp-changed");
-const imagemin = require("gulp-imagemin");
-const mozjpeg = require("imagemin-mozjpeg");
 
 const browserify = require("browserify");
 const babelify = require("babelify");
@@ -11,7 +8,14 @@ const vinylSourceStream = require("vinyl-source-stream");
 
 function pugHtml() {
   return src(["./src/pug/**/*.pug", "!./src/pug/template/*.pug"])
-    .pipe(pug({ pretty: false }))
+    .pipe(pug(
+      { 
+        pretty: false,
+        data: {
+          url: ""
+        }
+      }
+    ))
     .pipe(dest("./public/"));
 }
 
@@ -58,15 +62,15 @@ function run() {
 }
 
 // compilacion manual
-// exports.default = run;
+exports.default = run;
 
 // compilacion automatica
- exports.default = () => {
-    watch('./src/**/*.pug', pugHtml);
-    watch('./src/scss/**/*.scss', scssCss);
-    watch('./src/js/*.js', compiJs);
-    watch('./src/img/*', imagen);
-    watch('./src/app/*.php', appPhp);
- }
+//  exports.default = () => {
+//     watch('./src/**/*.pug', pugHtml);
+//     watch('./src/scss/**/*.scss', scssCss);
+//     watch('./src/js/*.js', compiJs);
+//     watch('./src/img/*', imagen);
+//     watch('./src/app/*.php', appPhp);
+//  }
 
  

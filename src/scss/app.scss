@@ -20,11 +20,13 @@ textarea {
 // Style Footer
 
 .bg-footer-contact {
-  background-image: url("../img/contacto.jpg");
+  background-image: url("../img/banner_footer_02.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   .capa-contact {
     background-color: transparent;
-    background-image: linear-gradient(180deg, #ffffff 0%, #23a455 100%);
+    background-image: linear-gradient(180deg, #ffffff 0%, #000 100%);
     opacity: 0.5;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     height: 100%;

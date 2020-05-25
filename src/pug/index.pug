@@ -99,7 +99,7 @@ block content
             },
         ]
     // Seccion Nosotros
-    section.section-main
+    section#nosotros.section-main
         .container
             .row
                 .col.col-lg-6
@@ -113,7 +113,7 @@ block content
                             img(src="img/lineas-de-transmision-electrica.jpg", alt="lineas de transmision electrica")
 
     // Seccion Misión Visión Valores
-    section.section-main.bg-section-green
+    section#mision_vision_valores.section-main.bg-section-green
         .container
             .row
                 .col.col-lg-4
@@ -184,7 +184,7 @@ block content
                                 p Medio Ambiente
 
     // Seccion Proyecto
-    section.section-main.bg-section-green
+    section#proyecto.section-main.bg-section-green
         .container
             .row
                 .col.col-lg-12
@@ -198,7 +198,7 @@ block content
                                 p= proyecto.text
 
     // Seccion Cliente
-    section.section-main
+    section#cliente.section-main
         .container
             .row
                 .col.col-lg-12
@@ -209,6 +209,49 @@ block content
                             .img-cliente
                                 img(src= `img/${cliente.img}`, alt= cliente.text, title= cliente.text)
 
+    // Seccion Banner Video
+    section.section-main.bg-banner-video.content-section-banner-video
+        .container
+            .row
+                .col.col-lg-6
+                    h2.content-text-banner-video.mb-4
+                        | Metodología BIM
+                        <br> Building Information Modelinganage
+                    button.btn.btn-outline-light Ver mas
+                .col.col-lg-6
+                    .content-banner-video
+                        iframe(src='https://www.youtube.com/embed/Zd7L1p7YXt8' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        .layer-banner-video
+    
+    // Seccion Banner Video
+    section#servicio.section-main
+        .container
+            .row
+                .col.col-lg-12
+                    h2.text-center.mb-5.section-title Servicios
+                .col.col-lg-4
+                    .card.card-servicios
+                        img.card-img-top(src= url+'img/ventas_servicios_01.jpg' alt='Venta')
+                        .card-body
+                            h5.card-title.text-center Ventas
+                            p.card-text Contamos con un equipo especializado en la COMERCIALIZACIÓN de equipos de protección personal EEP tales como mascarillas, guantes.
+                            p.card-text.mb-2 Así mismo materiales, equipos y maquinarias eléctricas para obras de Distribución de Energía Eléctrica y Sistemas de Puesta a Tierra para sistemas eléctricos y de telecomunicaciones.
+                            a.btn.btn-success(href='#') Ver Mas
+                .col.col-lg-4
+                    .card.card-servicios
+                        img.card-img-top(src= url+'img/imprenta_servicios_img02.jpg' alt='imprenta')
+                        .card-body
+                            h5.card-title.text-center Imprenta
+                            p.card-text.mb-2 Contamos con un equipo dedicado a la realizamos todo tipo de IMPRESIÓN publicitaria tales como afiches, calendarios, volantes, formatos, gigantografías, sellos y tarjetas personales.
+                            a.btn.btn-success(href='#') Ver Mas
+                .col.col-lg-4
+                    .card.card-servicios
+                        img.card-img-top(src= url+'img/asesoria_servicios_img03.jpg' alt='asesoria')
+                        .card-body
+                            h5.card-title.text-center Asesoría Legal
+                            p.card-text.mb-2 Contamos con un equipo de PROFESIONALES EXPERTOS en Consultoría y Asesoría para Medianas, Pequeñas y Micro Empresas a nivel nacional, ofreciéndole un servicio de CALIDAD Y 100% PERSONALIZADO para que poder dar solución a sus requerimientos legales. 
+                            a.btn.btn-success(href='#') Ver Mas
+    
     // Seccion Desco
     section.section-main.bg-section-green
         .container
