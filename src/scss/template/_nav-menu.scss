@@ -27,11 +27,25 @@
       .color-yt {
         color: #cd201f;
       }
+      .color-fb-footer,
+      .color-in-footer,
+      .color-yt-footer{
+        color: #fff;
+      }
     }
     li.item:hover .color-fb,
     li.item:hover .color-in,
     li.item:hover .color-yt{
       color: #607d8b;
+    }
+    li.item:hover .color-fb-footer{
+      color: #3b5998;
+    }
+    li.item:hover .color-in-footer{
+      color: #0077b5;
+    }
+    li.item:hover .color-yt-footer{
+      color: #cd201f;
     }
   }
 }

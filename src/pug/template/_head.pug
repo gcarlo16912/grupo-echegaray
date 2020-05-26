@@ -1,5 +1,5 @@
 -
-    var url = "http://grupoechegaray.com.devel/";
+    var url = "http://grupoechegaray.com/beta/";
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -12,6 +12,9 @@ html(lang="en")
         link(rel="stylesheet", href= url+"css/pages.css")
     body
         // insertando la barra de navegación
+        .content-buttom-scroll
+            button#btn-scroll-top.scroll-top
+                i.fas.fa-angle-up
         include _nav-menu.pug
         block content
         footer#contacto
@@ -43,13 +46,13 @@ html(lang="en")
                                 .content-social-networks
                                     ul.list
                                         li.item
-                                            a.link.color-fb
+                                            a(href="https://www.facebook.com/grupoechegaray1", target="_blank").link.color-fb.color-fb-footer
                                                 i.fab.fa-facebook-square
                                         li.item
-                                            a.link.color-in
+                                            a(href="https://www.linkedin.com/company/grupo-echegaray", target="_blank").link.color-in.color-in-footer
                                                 i.fab.fa-linkedin
                                         li.item
-                                            a.link.color-yt
+                                            a(href="https://www.youtube.com/channel/UCQX3vOu4c7Y3BBufm4eGJTA?view_as=subscriber", target="_blank").link.color-yt.color-yt-footer
                                                 i.fab.fa-youtube-square
                         .col.col-lg-4
                             .title-footer
@@ -92,5 +95,5 @@ html(lang="en")
                 p
                     | Derechos Reservados &copy; 2016 
                     i.fa.fa-value(aria-hidden='true') &nbsp;
-                    a(href='#') gcarloweb.com
+                    a(href='gcarloweb.com') gcarloweb.com
         script(src= url+"js/app.js")

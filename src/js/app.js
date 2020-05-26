@@ -1,6 +1,16 @@
 import $ from "jquery";
 import "bootstrap";
 import {formContact} from './main';
+
+// script scrool top
+let btnScrollTop = document.getElementById('btn-scroll-top');
+btnScrollTop.addEventListener('click', () => {
+  scroll({
+    top: 0,
+    behavior: 'smooth'
+  });
+})
+
 // Script navbar menu
 $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
   if (!$(this).next().hasClass("show")) {
