@@ -62,15 +62,15 @@ function run() {
 }
 
 // compilacion manual
-exports.default = run;
+// exports.default = run;
 
 // compilacion automatica
-//  exports.default = () => {
-//     watch('./src/**/*.pug', pugHtml);
-//     watch('./src/scss/**/*.scss', scssCss);
-//     watch('./src/js/*.js', compiJs);
-//     watch('./src/img/*', imagen);
-//     watch('./src/app/*.php', appPhp);
-//  }
+ exports.default = () => {
+    watch('./src/**/*.pug', pugHtml);
+    watch('./src/scss/**/*.scss', scssCss);
+    watch('./src/js/*.js', compiJs);
+    watch('./src/img/*', imagen);
+    watch('./src/app/*.php', appPhp);
+ }
 
  
