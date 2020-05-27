@@ -1,5 +1,5 @@
 -
-    var url = "https://grupoechegaray.com/beta/";
+    var url = "http://grupoechegaray.com.devel/";
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -10,6 +10,7 @@ html(lang="en")
         link(rel="stylesheet", href= url+"css/app.css")
         link(rel="stylesheet", href= url+"css/main.css")
         link(rel="stylesheet", href= url+"css/pages.css")
+        link(rel="stylesheet", href= url+"lib/lightslider/css/lightslider.css")
     body
         // insertando la barra de navegación
         .content-buttom-scroll
@@ -97,3 +98,12 @@ html(lang="en")
                     i.fa.fa-value(aria-hidden='true') &nbsp;
                     a(href='https://gcarloweb.com').text-white Desarrollado por GcarloWeb.com
         script(src= url+"js/app.js")
+        //- script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+        script(src= url+"lib/lightslider/js/lightslider.js")
+        script.
+            $("#galeria_proyecto").lightSlider({
+                //- autoWidth:true,
+                loop:true,
+                auto: true
+            });
+

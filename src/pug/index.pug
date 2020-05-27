@@ -203,7 +203,7 @@ block content
                                 p Medio Ambiente
 
     // Seccion Proyecto
-    section#proyecto.section-main.bg-section-green
+    section#proyecto.section-main.bg-section-green.d-none
         .container
             .row
                 .col.col-lg-12
@@ -215,6 +215,21 @@ block content
                                 img(src= `img/${proyecto.imgs}`, alt= proyecto.text)
                             .text-proyecto
                                 p= proyecto.text
+    
+    section#proyecto.section-main.bg-section-green
+        ul#galeria_proyecto
+            li
+                h3 1
+            li
+                h3 2
+            li
+                h3 3
+            li
+                h3 4
+            li
+                h3 5
+            li
+                h3 6
 
     // Seccion Cliente
     section#cliente.section-main

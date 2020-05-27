@@ -2,9 +2,9 @@ const { src, series, parallel, dest, watch } = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
 
-const browserify = require("browserify");
-const babelify = require("babelify");
-const vinylSourceStream = require("vinyl-source-stream");
+// const browserify = require("browserify");
+// const babelify = require("babelify");
+// const vinylSourceStream = require("vinyl-source-stream");
 
 function pugHtml() {
   return src(["./src/pug/**/*.pug", "!./src/pug/template/*.pug"])
@@ -31,14 +31,21 @@ function scssCss() {
     .pipe(dest("./public/css/"));
 }
 
-function compiJs() {
-  return browserify({
-    entries: "src/js/app.js",
-  })
-    .transform(babelify)
-    .bundle()
-    .pipe(vinylSourceStream("app.js"))
-    .pipe(dest("./public/js/"));
+// function compiJs() {
+//   return browserify({
+//     entries: "src/js/app.js",
+//   })
+//     .transform(babelify)
+//     .bundle()
+//     .pipe(vinylSourceStream("app.js"))
+//     .pipe(dest("./public/js/"));
+// }
+
+function scriptJs() {
+  /**
+   * scripts Js
+   */
+  return src("./src/js/*.js").pipe(dest("./public/js/"));
 }
 
 function imagen() {
@@ -49,6 +56,13 @@ function imagen() {
   return src("./src/img/*").pipe(dest("./public/img/"));
 }
 
+function libJs() {
+  /**
+   * librerias Js
+   */
+  return src("./src/libJs/**/*").pipe(dest("./public/lib/"));
+}
+
 function appPhp() {
   return src("./src/app/*.php").pipe(dest("./public/app/"));
 }
@@ -56,7 +70,9 @@ function appPhp() {
 function run() {
   pugHtml();
   scssCss();
-  compiJs();
+  // compiJs();
+  scriptJs();
+  libJs();
   imagen();
   appPhp();
 }
