@@ -23,6 +23,15 @@ $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
   return false;
 });
 
+/**
+ * script galeria de imagenes en seccion proyecto
+ */
+$("#galeria_proyecto").lightSlider({
+  //- autoWidth:true,
+  loop:true,
+  auto: true
+});
+
 $("#send-contact").click(() => {
   formContact("giancarlo", "gcarlo.com", "986432497");
 });

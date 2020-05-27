@@ -2,10 +2,6 @@ const { src, series, parallel, dest, watch } = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
 
-// const browserify = require("browserify");
-// const babelify = require("babelify");
-// const vinylSourceStream = require("vinyl-source-stream");
-
 function pugHtml() {
   return src(["./src/pug/**/*.pug", "!./src/pug/template/*.pug"])
     .pipe(pug(
@@ -31,16 +27,6 @@ function scssCss() {
     .pipe(dest("./public/css/"));
 }
 
-// function compiJs() {
-//   return browserify({
-//     entries: "src/js/app.js",
-//   })
-//     .transform(babelify)
-//     .bundle()
-//     .pipe(vinylSourceStream("app.js"))
-//     .pipe(dest("./public/js/"));
-// }
-
 function scriptJs() {
   /**
    * scripts Js
@@ -60,7 +46,7 @@ function libJs() {
   /**
    * librerias Js
    */
-  return src("./src/libJs/**/*").pipe(dest("./public/lib/"));
+  return src("./src/lib/**/*").pipe(dest("./public/lib/"));
 }
 
 function appPhp() {
@@ -70,7 +56,6 @@ function appPhp() {
 function run() {
   pugHtml();
   scssCss();
-  // compiJs();
   scriptJs();
   libJs();
   imagen();

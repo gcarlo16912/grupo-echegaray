@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gcarlo16912/grupo-echegaray#readme",
   "devDependencies": {
+    "bootstrap": "^4.5.0",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0"
