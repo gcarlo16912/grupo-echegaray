@@ -121,12 +121,12 @@ block content
     section#nosotros.section-main
         .container
             .row
-                .col.col-lg-6
+                .col-12.col-lg-6
                     .container-heading-title
                         h2.section-title Nosotros
                     .container-content
                         p.content-text.text-justify Somos una empresa conformada por un equipo multidisciplinario de profesionales altamente calificados; con amplia experiencia en proyectos y estudios de infraestructura en diferentes ramas de ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar integro y transparente, que impulsen el desarrollo, aporten al conocimiento técnico, agreguen valor valor, bienestar y aporten al mejoramiento de a calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
-                .col.col-lg-6
+                .col-12.col-lg-6
                     .container-image
                         .section-image
                             img(src="img/lineas-de-transmision-electrica.jpg", alt="lineas de transmision electrica")
@@ -135,17 +135,17 @@ block content
     section#mision_vision_valores.section-main.bg-section-green
         .container
             .row
-                .col.col-lg-4
+                .col-12.col-lg-4
                     .container-heading-title
                         h2.section-title.text-white Misión
                     .container-content
                         p.content-text.text-white Ejecutar proyectos y estudios de infraestructura en diferentes ramas de la ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar íntegro y transparente, que impulsen el desarrollo, contribuyan al conocimiento técnico, agreguen valor, bienestar y aporten al mejoramiento de la calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
-                .col.col-lg-4
+                .col-12.col-lg-4
                     .container-heading-title
                         h2.section-title.text-white Visión
                     .container-content
                         p.content-text.text-white Ser reconocidos como Empresa Líder a nivel nacional con proyección internacional, en la prestación de soluciones integrales de ingeniería y construcción aplicando el conocimiento y tecnología para contribuir al desarrollo sostenible, entregando proyectos a satisfacción de nuestros clientes y generando bienestar en sus colaboradores.
-                .col.col-lg-4
+                .col-12.col-lg-4
                     .container-heading-title
                         h2.section-title.text-white Valores
                     .container-content.d-flex.justify-content-around
@@ -164,37 +164,37 @@ block content
     section.section-main
         .container
             .row
-                .col.col-lg-12
-                    h2.text-center.mb-5.section-title Consultoría
-                .col.col-lg-4.mb-0.mb-lg-4
+                .col-12.my-2
+                    h2.text-center.mb-0.mb-lg-5.section-title Consultoría
+                .col-12.col-md-6.col-lg-4.mb-2.mb-lg-4
                     .container-title-image
                         a(href="/energia")
                             .container-image
                                 img(src="img/energia_electrica.jpeg", alt="energia electrica")
                             .container-text
                                 p Energía
-                .col.col-lg-4.mb-0.mb-lg-4
+                .col-12.col-md-6.col-lg-4.mb-2.mb-lg-4
                     .container-title-image
                         a(href="/edificaciones")
                             .container-image
                                 img(src="img/edificacion.jpeg", alt="edificacion")
                             .container-text
                                 p Edificaciones
-                .col.col-lg-4.mb-0.mb-lg-4
+                .col-12.col-md-6.col-lg-4.mb-2.mb-lg-4
                     .container-title-image
                         a(href="/senamiento")
                             .container-image
                                 img(src="img/agua_senamiento.jpeg", alt="agua de senamiento")
                             .container-text
                                 p Senamiento
-                .col.col-lg-4.mb-0.mb-lg-4
+                .col-12.col-md-6.col-lg-4.mb-2.mb-lg-4
                     .container-title-image
                         a(href="/medio_ambiente")
                             .container-image
                                 img(src="img/medio_ambiente.jpeg", alt="medio ambiente")
                             .container-text
                                 p Medio Ambiente
-                .col.col-lg-4.mb-0.mb-lg-4
+                .col-12.col-md-6.col-lg-4.mb-2.mb-lg-4
                     .container-title-image
                         a(href="/medio_ambiente")
                             .container-image
@@ -203,42 +203,27 @@ block content
                                 p Medio Ambiente
 
     // Seccion Proyecto
-    section#proyecto.section-main.bg-section-green.d-none
+    section#proyecto.section-main.bg-section-green
         .container
             .row
-                .col.col-lg-12
-                    h2.text-center.mb-5.section-title.text-white  Proyecto
-                each proyecto in proyectos
-                    .col.col-lg-4.mb-0.mb-lg-4
-                        .container-proyecto
-                            .img-proyecto
+                .col-12.mb-2
+                    h2.text-center.mb-0.mb-lg-5.section-title.text-white  Proyectos
+                .col-12
+                    ul#galeria_proyecto.list-galeria-proyecto
+                        each proyecto, key in proyectos
+                            -
+                                var n = key + 1
+                            li(data-src= `img/${proyecto.imgs}`, class= `item-${n}`).item
                                 img(src= `img/${proyecto.imgs}`, alt= proyecto.text)
-                            .text-proyecto
-                                p= proyecto.text
-    
-    section#proyecto.section-main.bg-section-green
-        ul#galeria_proyecto
-            li
-                h3 1
-            li
-                h3 2
-            li
-                h3 3
-            li
-                h3 4
-            li
-                h3 5
-            li
-                h3 6
 
     // Seccion Cliente
     section#cliente.section-main
         .container
             .row
-                .col.col-lg-12
-                    h2.text-center.mb-5.section-title Cliente
+                .col-12
+                    h2.text-center.mb-0.mb-lg-5.section-title Cliente
                 each cliente in clientes
-                    .col.col-lg-3.mb-0.mb-lg-4
+                    .col-6.col-lg-3.mb-0.mb-lg-4
                         .container-cliente
                             .img-cliente
                                 img(src= `img/${cliente.img}`, alt= cliente.text, title= cliente.text)
@@ -247,54 +232,58 @@ block content
     section.section-main.bg-banner-video.content-section-banner-video
         .container
             .row
-                .col.col-lg-6
+                .col-12.col-lg-6
                     h2.content-text-banner-video.mb-4
                         | Metodología BIM
                         <br> Building Information Modelinganage
-                    button.btn.btn-outline-light Ver mas
-                .col.col-lg-6
+                    .container.mb-2.mb-lg-0
+                        .row
+                            .col-12.col-lg-3
+                                button.btn.btn-outline-light.btn-block Ver mas
+                .col-12.col-lg-6
                     .content-banner-video
                         iframe(src='https://www.youtube.com/embed/Zd7L1p7YXt8' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
         .layer-banner-video
 
-    // Seccion Banner Video
+    // Seccion Servicios
     section#servicio.section-main
         .container
             .row
-                .col.col-lg-12
-                    h2.text-center.mb-5.section-title Servicios
-                .col.col-lg-4
+                .col-12
+                    h2.text-center.mb-0.mb-lg-5.section-title Servicios
+                .col-12.col-md-6.col-lg-4
                     .card.card-servicios
                         img.card-img-top(src= url+'img/ventas_servicios_01.jpg' alt='Venta')
                         .card-body
                             h5.card-title.text-center Ventas
                             p.card-text Contamos con un equipo especializado en la COMERCIALIZACIÓN de equipos de protección personal EEP tales como mascarillas, guantes.
                             p.card-text.mb-2 Así mismo materiales, equipos y maquinarias eléctricas para obras de Distribución de Energía Eléctrica y Sistemas de Puesta a Tierra para sistemas eléctricos y de telecomunicaciones.
-                            a.btn.btn-success(href='#') Ver Mas
-                .col.col-lg-4
+                            a.btn.btn-success.btn-block(href='#') Ver Mas
+                .col-12.col-md-6.col-lg-4
                     .card.card-servicios
                         img.card-img-top(src= url+'img/imprenta_servicios_img02.jpg' alt='imprenta')
                         .card-body
                             h5.card-title.text-center Imprenta
                             p.card-text.mb-2 Contamos con un equipo dedicado a la realizamos todo tipo de IMPRESIÓN publicitaria tales como afiches, calendarios, volantes, formatos, gigantografías, sellos y tarjetas personales.
-                            a.btn.btn-success(href='#') Ver Mas
-                .col.col-lg-4
+                            a.btn.btn-success.btn-block(href='#') Ver Mas
+                .col-12.col-md-6.col-lg-4
                     .card.card-servicios
                         img.card-img-top(src= url+'img/asesoria_servicios_img03.jpg' alt='asesoria')
                         .card-body
                             h5.card-title.text-center Asesoría Legal
                             p.card-text.mb-2 Contamos con un equipo de PROFESIONALES EXPERTOS en Consultoría y Asesoría para Medianas, Pequeñas y Micro Empresas a nivel nacional, ofreciéndole un servicio de CALIDAD Y 100% PERSONALIZADO para que poder dar solución a sus requerimientos legales. 
-                            a.btn.btn-success(href='#') Ver Mas
+                            a.btn.btn-success.btn-block(href='#') Ver Mas
 
     // Seccion Desco
     section.section-main.bg-section-green
         .container
             .row
-                .col.col-lg-6
+                .col-12.col-md-6.col-lg-6
                     .container-image
                         .section-image
                             img(src="img/reunion.jpg", alt="reunion")
-                .col.col-lg-6
+                .col-12.col-md-6.col-lg-6
                     .container-content
                         p.content-text.text-white.text-justify Somos una empresa conformada por un equipo multidisciplinario de profesionales altamente calificados; con amplia experiencia en proyectos y estudios de infraestructura en diferentes ramas de ingeniería, ofreciendo soluciones confiables técnicas y económicas con calidad, oportunidad y respaldo, en un marco de sostenibilidad social y ambiental, mediante un accionar integro y transparente, que impulsen el desarrollo, aporten al conocimiento técnico, agreguen valor valor, bienestar y aporten al mejoramiento de a calidad de vida de nuestros colaboradores y de las comunidades beneficiadas.
 
+                        

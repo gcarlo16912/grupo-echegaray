@@ -26,11 +26,40 @@ $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
 /**
  * script galeria de imagenes en seccion proyecto
  */
-$("#galeria_proyecto").lightSlider({
-  //- autoWidth:true,
-  loop:true,
-  auto: true
-});
+if(window.innerWidth >= 768 ){
+  $("#galeria_proyecto").lightSlider({
+    loop:true,
+    auto: true,
+    gallery:false,
+    item:3,
+    thumbItem:9,
+    enableDrag: false,
+    currentPagerPosition:'left',
+    onSliderLoad: function(el) {
+        el.lightGallery({
+            selector: '#galeria_proyecto .lslide',
+        });
+    }  
+  });
+}else{
+  $("#galeria_proyecto").lightSlider({
+    autoWidth:true,
+    loop:true,
+    auto: false,
+    gallery:false,
+    item:3,
+    thumbItem:9,
+    enableDrag: false,
+    currentPagerPosition:'left',
+    onSliderLoad: function(el) {
+        el.lightGallery({
+            selector: '#galeria_proyecto .lslide',
+        });
+        $('#galeria_proyecto').removeClass('cS-hidden');
+    }  
+  });
+}
+
 
 $("#send-contact").click(() => {
   formContact("giancarlo", "gcarlo.com", "986432497");

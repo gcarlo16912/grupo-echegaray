@@ -11,6 +11,7 @@ html(lang="en")
         link(rel="stylesheet", href= url+"css/main.css")
         link(rel="stylesheet", href= url+"css/pages.css")
         link(rel="stylesheet", href= url+"lib/lightslider/css/lightslider.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.7.0/css/lightgallery.min.css")
     body
         // insertando la barra de navegación
         .content-buttom-scroll
@@ -19,11 +20,11 @@ html(lang="en")
         include _nav-menu.pug
         block content
         footer#contacto
-            .p-0.p-lg-5.bg-footer-contact.position-relative
+            .pt-2.p-0.p-lg-5.bg-footer-contact.position-relative
                 .capa-contact
                 .container
                     .row
-                        .col.col-lg-4
+                        .col-12.col-lg-4
                             .title-footer
                                 h2.title Contactos
                             .content-list-contact
@@ -55,7 +56,7 @@ html(lang="en")
                                         li.item
                                             a(href="https://www.youtube.com/channel/UCQX3vOu4c7Y3BBufm4eGJTA?view_as=subscriber", target="_blank").link.color-yt.color-yt-footer
                                                 i.fab.fa-youtube-square
-                        .col.col-lg-4
+                        .col-12.col-md-6.col-lg-4
                             .title-footer
                                 h2.title Contactos
                             .content-list-links
@@ -77,26 +78,28 @@ html(lang="en")
                                         a(href="#")
                                             i.fas.fa-link.pr-2
                                             | Medio Ambiente
-                        .col.col-lg-4
+                        .col-12.col-md-6.col-lg-4
                             .content-formulario
                                 form#form_contact
                                     .container
                                         .row
-                                            .col-12.mb-0.mb-lg-2
+                                            .col-12.mb-2
                                                 input(type="text", name="nombre", placeholder="Nombre", required).form-control
-                                            .col-12.mb-0.mb-lg-2
+                                            .col-12.mb-2
                                                 input(type="email", name="email", placeholder="Email", required).form-control
-                                            .col-12.mb-0.mb-lg-2
+                                            .col-12.mb-2
                                                 input(type="telf", name="telefono", placeholder="Telefono", required).form-control
-                                            .col-12.mb-0.mb-lg-2
+                                            .col-12.mb-2
                                                 textarea(name="mensaje", cols="30", rows="10", required).form-control
-                                            .col-12
-                                                button#send-contact.btn.btn-primary(type='button') Contactar
+                                            .col-12.mb-2
+                                                button#send-contact.btn.btn-primary.btn-block(type='button') Contactar
             .container
                 p.content-copy
                     | Copyright &copy; 2020 Grupo Echegaray,
                     i.fa.fa-value(aria-hidden='true') &nbsp;
                     a(href='https://gcarloweb.com').text-white Desarrollado por GcarloWeb.com
         script(src= url+"lib/jquery-3.5.1.min.js")
+        script(src= url+"lib/bootstrap/js/bootstrap.min.js")
         script(src= url+"lib/lightslider/js/lightslider.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.7.0/js/lightgallery.min.js")
         script(src= url+"js/main.js")

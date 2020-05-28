@@ -1,6 +1,9 @@
 // Logo Navbar
 .link-navbar-menu {
   width: 13.17%;
+  @media all and (max-width: 576px){
+    width: 32.17%;
+  }
   .logo-nav-bar {
     width: 100%;
   }

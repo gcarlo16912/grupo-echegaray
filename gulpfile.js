@@ -66,10 +66,11 @@ function run() {
 exports.default = run;
 
 // compilacion automatica
-//  exports.default = () => {
+// exports.default = () => {
 //     watch('./src/**/*.pug', pugHtml);
 //     watch('./src/scss/**/*.scss', scssCss);
-//     watch('./src/js/*.js', compiJs);
+//     watch('./src/js/*.js', scriptJs);
+//     watch('./src/lib/**/*', libJs);
 //     watch('./src/img/*', imagen);
 //     watch('./src/app/*.php', appPhp);
 //  }
